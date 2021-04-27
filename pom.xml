@@ -1,0 +1,128 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>az-messaging-test</groupId>
+  <artifactId>az-messaging-test</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <!-- 
+              <mainClass>com.microsoft.docs.iothub.samples.SimulatedDevice</mainClass>
+               -->
+              <mainClass>com.microsoft.docs.iothub.samples.ReadDeviceToCloudMessages</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+
+	  <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-dependency-plugin</artifactId>
+	    <executions>
+	      <execution>
+	        <id>copy-dependencies</id>
+	        <phase>package</phase>
+	        <goals>
+	          <goal>copy-dependencies</goal>
+	        </goals>
+	        <configuration>
+	          <outputDirectory>${project.build.directory}/ext</outputDirectory>
+	          <overWriteReleases>false</overWriteReleases>
+	          <overWriteSnapshots>false</overWriteSnapshots>
+	          <overWriteIfNewer>true</overWriteIfNewer>
+	        </configuration>
+	      </execution>
+	    </executions>
+	  </plugin>
+
+    </plugins>
+  </build>
+	<dependencies>
+  		<dependency>
+    		<groupId>com.azure</groupId>
+    		<artifactId>azure-core</artifactId>
+    		<version>1.15.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.azure</groupId>
+		    <artifactId>azure-core-amqp</artifactId>
+		    <version>2.0.4</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>com.azure</groupId>
+    		<artifactId>azure-messaging-servicebus</artifactId>
+    		<version>7.2.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.azure</groupId>
+		    <artifactId>azure-messaging-eventhubs</artifactId>
+		    <version>5.7.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.azure/azure-messaging-eventhubs-checkpointstore-blob -->
+		<dependency>
+		    <groupId>com.azure</groupId>
+		    <artifactId>azure-messaging-eventhubs-checkpointstore-blob</artifactId>
+		    <version>1.6.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.azure/azure-storage-blob -->
+		<dependency>
+		    <groupId>com.azure</groupId>
+		    <artifactId>azure-storage-blob</artifactId>
+		    <version>12.10.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.azure/azure-storage-common -->
+		<dependency>
+		    <groupId>com.azure</groupId>
+		    <artifactId>azure-storage-common</artifactId>
+		    <version>12.10.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.azure/azure-storage-internal-avro -->
+		<dependency>
+		    <groupId>com.azure</groupId>
+		    <artifactId>azure-storage-internal-avro</artifactId>
+		    <version>12.0.2</version>
+		</dependency>
+	
+	    <dependency>
+	      <groupId>com.microsoft.azure.sdk.iot</groupId>
+	      <artifactId>iot-device-client</artifactId>
+	      <version>1.16.0</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.google.code.gson</groupId>
+	      <artifactId>gson</artifactId>
+	      <version>2.3.1</version>
+	    </dependency>
+	    
+		<!-- https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3 -->
+		<!-- 
+		<dependency>
+		    <groupId>org.eclipse.paho</groupId>
+		    <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+		    <version>1.2.5</version>
+		</dependency>
+		 -->
+
+    						
+	</dependencies>  
+</project>

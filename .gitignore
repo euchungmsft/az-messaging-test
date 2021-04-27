@@ -1,0 +1,12 @@
+.git
+.settings
+/bin/**
+/data/**
+/src/**/*[0-9].java
+/src/**/PahoClient.java
+/target/**
+/tmp/**
+config.properties
+*.sh
+*.txt
+*.old
