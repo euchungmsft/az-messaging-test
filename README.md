@@ -139,7 +139,31 @@ Running Event Hub Receiver
 
 	mvn exec:java -Dexec.mainClass="com.eg.az.test.eventhub.Receiver"
 
-Or without maven for running these, you can create a shell script which adds all dependencies into the classpath of JVM runtime
+Or without maven for running these, you can create a shell script which adds all dependencies into the classpath of JVM runtime <br>
+
+All message clients (Client, Publisher, Sender) send com.eg.az.test.common.TelemetryDataPoint with data as message contents
+
+
+	package com.eg.az.test.common;
+	
+	import java.util.Random;
+	
+	import com.google.gson.Gson;
+	
+	public class TelemetryDataPoint {
+		
+		public double temperature;
+		public double humidity;
+		public long createdat;
+		
+		double minTemperature = 20;
+		double minHumidity = 60;
+		
+		String data;
+
+
+When it's created current time's automatically saved to createdat. data is message contents. TelemetryDataPoint gets data length then it generates randome string
+
 
 ## Azure Service Configuration 
 
