@@ -1,0 +1,11 @@
+.git
+.settings
+/bin/**
+/data/**
+/src/**/*[0-9].java
+/target/**
+/tmp/**
+config.properties
+*.sh
+*.txt
+*.old

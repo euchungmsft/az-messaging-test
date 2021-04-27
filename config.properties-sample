@@ -1,0 +1,54 @@
+# event hub reciever config
+
+eventhub.receiver.connection-string=
+eventhub.receiver.eventhub-name=
+eventhub.receiver.storage-connection-string=
+eventhub.receiver.storage-container-name=
+eventhub.receiver.clients=1
+
+# event hub sender
+
+eventhub.sender.connection-string=
+eventhub.sender.eventhub-name=
+eventhub.sender.interv-per-send=1000
+eventhub.sender.messages-per-client=100
+eventhub.sender.interv-per-client=1000
+eventhub.sender.clients=1
+eventhub.sender.data-length=64
+
+# servicebus subscriber
+
+servicebus.subscriber.connection-string=
+servicebus.subscriber.queue-name=
+servicebus.subscriber.clients=1
+
+# servicebus publisher
+
+servicebus.publisher.connection-string=
+servicebus.publisher.queue-name=
+servicebus.publisher.interv-per-send=1000
+servicebus.publisher.messages-per-client=100
+servicebus.publisher.interv-per-client=1000
+servicebus.publisher.clients=1
+servicebus.publisher.data-length=64
+
+# iothub service
+
+iothub.service.endpoint=
+iothub.service.hub-path=
+iothub.service.sas-key=
+iothub.service.sas-keyname=
+iothub.service.clients=1
+
+# iothub client
+
+iothub.client.devicefile=devices.txt
+iothub.client.interv-per-send=1000
+iothub.client.messages-per-client=100
+iothub.client.interv-per-client=1000
+iothub.client.clients=1
+iothub.client.data-length=64
+
+# common config
+
+common.mark.over=500
