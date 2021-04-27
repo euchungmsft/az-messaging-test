@@ -43,15 +43,6 @@ public class Sender extends TestCase {
 	}
 
 	// messaging config
-
-	//static final String connectionString = "Endpoint=sb://ehkrcnt01.servicebus.windows.net/;SharedAccessKeyName=tester;SharedAccessKey=mkLLOPFEjx49IBbu/Jp95RqQzaCeogsT60O5aUmiI24=;EntityPath=eh1";
-	//static final String eventHubName = "eh1";
-	
-	//static final String connectionString = "Endpoint=sb://ehkrcnt01.servicebus.windows.net/;SharedAccessKeyName=tester1;SharedAccessKey=PIrOckmc+95KpwlwjcZTl+/PncmCJQOQH8V54aLdyDs=;EntityPath=eh2";
-	//static final String eventHubName = "eh2";	//	 partition 1
-
-	//static final String connectionString = "Endpoint=sb://ehkrcnt01.servicebus.windows.net/;SharedAccessKeyName=tester1;SharedAccessKey=yaUJyCC9JgBKC0Eoy4VlutQ06Nh95R7NbPBNqKyz7rk=;EntityPath=eh3";
-	//static final String eventHubName = "eh3";	//	 partition 2
 	
 	static final String connectionString;
 	static final String eventHubName;	

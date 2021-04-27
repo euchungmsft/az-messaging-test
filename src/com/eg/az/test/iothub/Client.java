@@ -45,7 +45,6 @@ public class Client extends TestCase {
 	// Using the Azure CLI:
 	// az iot hub device-identity show-connection-string --hub-name {YourIoTHubName}
 	// --device-id MyJavaDevice --output table
-	//private static String connString = "HostName=kr-iot-01.azure-devices.net;DeviceId=MyJavaDevice;SharedAccessKey=ruC7nEc/BccugCIkuZj+15qQa+NZ3ckVgMH+53HWu7Y=";
 	String connString;
 
 	// Using the MQTT protocol to connect to IoT Hub
